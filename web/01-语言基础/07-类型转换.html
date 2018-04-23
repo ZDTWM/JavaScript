@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>类型转换</title>
+<script>
+	document.write("<h2>1、伪对象<h2>");	
+	//1、伪对象
+	var a = "hello javascript";
+	document.write("变量a的类型是：" + (typeof a));
+	document.write("<br>");
+	document.write("变量a的长度是：" + a.length);
+	document.write("<br>");
+	document.write("<h2>2、转换为字符串<h2>");
+	//2、转换为字符串
+  	var b=10;
+  	document.write("数字 "+b+" 转换为字符串"+a.toString());
+  	document.write("<br>");
+  	var c=true;
+  	document.write("布尔 "+c+" 转换为字符串"+b.toString());
+  	document.write("<br>");
+  	var d="hello javascript";
+  	document.write("字符串 "+d+" 转换为字符串 "+c.toString());
+  	document.write("<br>");
+	document.write("<h2>3、数字转字符串<h2>");
+  	//3、数字转字符串
+  	var e=10;
+  	document.write('默认模式下，数字10转换为十进制的'+e.toString()); //默认模式，即十进制
+  	document.write("<br>");
+ 
+  	document.write('基模式下，数字10转换为二进制的'+e.toString(2)); //基模式，二进制
+  	document.write("<br>");
+   
+ 	document.write('基模式下，数字10转换为八进制的'+e.toString(8)); //基模式，八进制
+  	document.write("<br>");
+ 
+  	document.write('基模式下，数字10转换为十六进制的'+e.toString(16)); //基模式，十六进制
+  	document.write("<br>");
+  	document.write("<h2>4、转换为数字<h2>");
+  	//4、转换为数字
+  	document.write("字符串的\"10\"转换为数字的:"+parseInt("10")); //转换整数
+  	document.write("<br>");
+  	document.write("字符串的\"3.14\"转换为数字的:"+parseFloat("3.14"));//转换浮点数
+  	document.write("<br>");
+  	document.write("字符串的\"10abc\"转换为数字的:"+parseInt("10abc")); //判断每一位，直到发现不是数字的那一位
+  	document.write("<br>");
+ 
+  	document.write("字符串的\"hello javascript\"转换为数字的:"+parseInt("hello javascript")); //如果完全不包含数字，则返回NaN - Not a Number
+  	document.write("<br>");
+  	document.write("字符串的\"10abc8\"转换为数字的:"+parseInt("10abc8"));
+  	document.write("<br>");
+  	document.write("<h2>5、转换为Boolean<h2>");
+  	//5、转换为Boolean
+  	document.write("空字符串''转换为布尔后的值:"+Boolean(""));  //空字符串
+  	document.write("<br>");
+  	document.write("非空字符'hello javascript '串转换为布尔后的值:"+Boolean("hello javascript"));  //非空字符串
+  	document.write("<br>");
+  	document.write("数字 0 转换为布尔后的值:"+Boolean(0));  //0
+  	document.write("<br>");
+  	document.write("数字 3.14 转换为布尔后的值:"+Boolean(3.14)); //非0
+  	document.write("<br>");
+  	document.write("空对象 null 转换为布尔后的值:"+Boolean(null));  //null
+  	document.write("<br>");
+  	document.write("非空对象 new Object() 转换为布尔后的值:"+Boolean(new Object()));  //对象存在
+  	document.write("<br>");
+  	document.write("<h2>6、Number()和parseInt()区别<h2>");
+  	//6、Number()和parseInt()区别
+  	document.write("通过Number() 函数转换字符串'123' 后得到的数字："+Number("123"));   //正常的
+  	document.write("<br>");
+  	document.write("通过Number() 函数转换字符串'123abc' 后得到的数字："+Number("123abc"));   //包含非数字
+  	document.write("<br>");
+  	document.write("通过Number() 函数转换字符串'abc123' 后得到的数字："+Number("abc123"));   //包含非数字
+  	document.write("<br>");
+ 
+  	document.write("通过parseInt() 函数转换字符串'123' 后得到的数字："+parseInt("123"));   //正常的
+  	document.write("<br>");
+  	document.write("通过parseInt() 函数转换字符串'123abc' 后得到的数字："+parseInt("123abc"));   //包含非数字,返回开头的合法数字部分
+  	document.write("<br>");
+  	document.write("通过parseInt() 函数转换字符串'abc123' 后得到的数字："+parseInt("abc123"));   //包含非数字,以非数字开头，返回NaN
+  	document.write("<br>");
+  	document.write("<h2>7、String()和toString()的区别<h2>");
+  	//7、String()和toString()的区别
+  	var s = null;
+  	document.write('String(null) 把空对象转换为字符串：'+String(s)); 
+  	document.write("<br>"); 
+  	document.write('null.toString() 就会报错，所以后面的代码不能执行'); 
+  	document.write(s.toString()); 
+  	document.write("因为第86行报错，所以这一段文字不会显示");
+</script>
+</head>
+<body>
+	
+</body>
+</html>
