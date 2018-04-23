@@ -1,0 +1,1 @@
+document.write("HelloJavaScript:使用外部js文件")
