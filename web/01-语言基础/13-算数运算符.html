@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>算数运算符</title>
+<script>
+	//1、基本算数运算符
+	function p(a){
+		document.write(a);
+		document.write("<br>");
+	}
+	p("1+2=" + (1+2));
+	p("5-3=" + (5-3));
+	p("3*2=" + (3*2));
+	p("10%3=" + (10%3));
+	//2、自增自减运算符
+	var b = 5;
+	document.write('a++ 是先取值，再运算，所以打印出来是：' + b++);//先取值 ，即5
+	document.write("<br>");
+	var c = 5;
+	document.write('++b 是先运算，再取值，所以打印出来是：' + ++c);//先运算，再取值，即6
+	document.write("<br>");
+	//3、赋值运算符
+	d = 6;
+	d += 6;
+	document.write("d+=6就是 d= d+6的意思，所以最后的值就等于:" + d);
+	document.write("<br>");
+	//4、运算符的多态
+	document.write('当+两边都是数字的时候，+就是加法运算符，所以1+2=' + (1+2));
+	document.write("<br>");
+	document.write('当+任意一边是字符串的时候，+就是字符串连接符，所以1+\"2\"='+ (1+"2"));
+	document.write("<br>");
+</script>
+</head>
+<body>
+	
+</body>
+</html>
