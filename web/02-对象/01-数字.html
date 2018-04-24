@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数字</title>
+<script>
+	
+	//1、创建一个数字对象
+	document.write("<h2>1、创建一个数字对象<h2>");
+	var x = new Number(123);
+	document.write('数字对象x的值：' + x);
+	document.write("<br>");
+	document.write('数字对象x的类型：' + typeof x);//通过typeof 获知这是一个object
+	document.write("<br>");
+	var y = 123;
+	document.write('基本类型y的值：' + y);
+	document.write("<br>");
+	document.write('基本类型y的类型:' + typeof y);//通过typeof 获知这是一个number
+	//2、最小值，最大值
+	document.write("<h2>2、最小值，最大值<h2>");
+	document.write('Number对象的最小值:' + Number.MIN_VALUE);
+	document.write("<br>");
+	document.write('Number对象的最大值:' + Number.MAX_VALUE);
+	//3、表示不是数字
+	document.write("<h2>3、表示不是数字<h2>");
+	function p(s){
+		document.write(s);
+		document.write("<br>");
+	}
+	var a = new Number("123abc");//通过非数字创建Number对象，得到的是一个NaN
+	p('通过非数字字符串"123abc"创建出来的Number对象 a的值是：' + a);
+	p('但是, a==Number.NaN会返回:' + (a==Number.NaN));//即便是一个NaN 也"不等于" Number.NaN
+	p('正确判断是否是NaN的方式是调用isNaN函数:' + isNaN(a));//正确的方式是通过isNaN() 函数进行判断
+	//4、返回一个数字的小数表达
+	document.write("<h2>4、返回一个数字的小数表达<h2>");
+	var b = new Number("123");
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>
